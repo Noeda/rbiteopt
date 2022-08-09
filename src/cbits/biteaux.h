@@ -135,7 +135,7 @@ public:
 
 	double getSqr()
 	{
-		const double v = ( advance() >> ( 64 - 53 )) * 0x1p-53;
+		const double v = ( advance() >> ( 64 - 53 )) * 1.1102230246251565e-16;
 
 		return( v * v );
 	}
@@ -147,7 +147,7 @@ public:
 
 	double getPow( const double p )
 	{
-		const double v = ( advance() >> ( 64 - 53 )) * 0x1p-53;
+		const double v = ( advance() >> ( 64 - 53 )) * 1.1102230246251565e-16;
 
 		if( p < 2.0 )
 		{
