@@ -7,6 +7,7 @@ links = "rbiteopt"
 
 [dependencies]
 libc = "0.2"
+crossbeam = "0.8"
 rcmaes = { git = "https://github.com/Noeda/rcmaes", rev = "46622d2c5fe68841f5fbf93efed162762650c1a8" }
 
 [build-dependencies]
