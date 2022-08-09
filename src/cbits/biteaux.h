@@ -114,7 +114,7 @@ public:
 
 	double get()
 	{
-		return(( advance() >> ( 64 - 53 )) * 0x1p-53 );
+		return(( advance() >> ( 64 - 53 )) * 1.1102230246251565e-16 );
 	}
 
 	/**
@@ -246,7 +246,7 @@ public:
 		const int64_t v1 = (int64_t) ( advance() >> ( 64 - 53 ));
 		const int64_t v2 = (int64_t) ( advance() >> ( 64 - 53 ));
 
-		return(( v1 - v2 ) * 0x1p-53 );
+		return(( v1 - v2 ) * 1.1102230246251565e-16 );
 	}
 
 	/**
@@ -1016,7 +1016,7 @@ public:
 				// This approach reduces search locality due to allowing older
 				// solutions to remain in population.
 
-				static const double etol = 0x1p-52;
+				static const double etol = 2.2204460492503131e-16;
 				const double c = *getObjPtr( PopParams[ p ]);
 				const double cd = fabs( UpdCost - c );
 
